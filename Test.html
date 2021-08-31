@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script >
+        function onStart(){
+    
+            for(let i=0;i<4;i++){
+                let num= i+1
+                if(document.getElementById('p'+num).className === 'edge'){
+                    document.getElementById('p'+num).className += ' animation' + 'p'+ num
+                }
+            }
+        }
+        function onStop(){
+            
+            for(let i=0;i<4;i++){ 
+                let num= i+1
+                document.getElementById('p'+num).className = 'edge'
+                
+            }
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+    
+        }
+        #container{
+            top: 10rem;
+            position: relative;
+        }
+        .button{
+            display: inline-block;
+            width: 4rem;
+            height: 2rem;
+            text-align: center;
+            line-height: 2rem;
+            border-radius: 0.5rem;
+            background-color: rgb(54, 72, 107);
+            color: aliceblue;
+        }
+        .btnContainer{
+            
+            width:9rem;
+            
+            margin: auto;
+            margin-top: 3rem;
+        }
+        .edge{
+            display: inline-block;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 2rem;
+        }
+        #animation{
+            
+            width: 13rem;
+            height: 13rem;
+            position: relative;
+            margin: auto;
+        }
+
+        #p1{
+            background-color: red;
+            
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            z-index: 4;
+            
+        }
+        #p2{
+            background-color: yellow;
+            
+            position: absolute;
+            top: 0.5rem;
+            right:0.5rem;
+            z-index: 3;
+            
+        }
+        #p3{
+            background-color: black;
+            position: absolute;
+            bottom: 0.5rem;
+            left:0.5rem;
+            z-index: 1;
+            
+        }
+        #p4{
+            background-color: blue;
+            
+            position: absolute;
+            bottom: 0.5rem;
+            right:0.5rem;
+            z-index: 2;
+            
+        }
+        .animationp1{
+            animation-name: changep1;
+            animation-duration: 8s;
+            animation-timing-function: ease-in-out;
+            
+            animation-iteration-count: infinite;
+        }
+        .animationp2{
+            animation-name: changep2;
+            animation-duration: 8s;
+            animation-timing-function: ease-in-out;
+            
+            animation-iteration-count: infinite;
+        }
+        .animationp3{
+            animation-name: changep3;
+            animation-duration: 8s;
+            animation-timing-function: ease-in-out;
+            
+            animation-iteration-count: infinite;
+        }
+        .animationp4{
+            animation-name: changep4;
+            animation-duration: 8s;
+            animation-timing-function: ease-in-out;
+            
+            animation-iteration-count: infinite;
+        }
+        @keyframes changep1 {
+            0%{
+                background-color: red;
+                width: 4rem;
+            }
+            12.5%{
+                background-color: yellow;
+                width: 12rem;
+            }
+            25%{
+                background-color: yellow;
+                width: 4rem;
+            }
+            37.5%{
+                background-color: blue;
+                width: 12rem;
+            }
+            50%{
+                background-color: blue;
+                width: 4rem;
+            }
+            62.5%{
+                background-color: black;
+                width: 12rem;
+            }
+            75%{
+                background-color: black;
+                width: 4rem;
+            }
+            87.5%{
+                background-color: red;
+                width: 12rem;
+            }
+            100%{
+                background-color: red;
+                width: 4rem;
+            }
+        }
+        @keyframes changep2 {
+            0%{
+                background-color: yellow;
+                height: 4rem;
+            }
+            12.5%{
+                background-color: blue;
+                height: 12rem;
+            }
+            25%{
+                background-color: blue;
+                height: 4rem;
+            }
+            37.5%{
+                background-color: black;
+                height: 12rem;
+            }
+            50%{
+                background-color: black;
+                height: 4rem;
+            }
+            62.5%{
+                background-color: red;
+                height: 12rem;
+            }
+            75%{
+                background-color: red;
+                height: 4rem;
+            }
+            87.5%{
+                background-color: yellow;
+                height: 12rem;
+            }
+            100%{
+                background-color: yellow;
+                height: 4rem;
+            }
+        }
+        @keyframes changep4 {
+            0%{
+                background-color: blue;
+                width: 4rem;
+            }
+            12.5%{
+                background-color: black;
+                width: 12rem;
+            }
+            25%{
+                background-color: black;
+                width: 4rem;
+            }
+            37.5%{
+                background-color: red;
+                width: 12rem;
+            }
+            50%{
+                background-color: red;
+                width: 4rem;
+            }
+            62.5%{
+                background-color: yellow;
+                width: 12rem;
+            }
+            75%{
+                background-color: yellow;
+                width: 4rem;
+            }
+            87.5%{
+                background-color: blue;
+                width: 12rem;
+            }
+            100%{
+                background-color: blue;
+                width: 4rem;
+            }
+        }
+        @keyframes changep3 {
+            0%{
+                background-color: black;
+                height: 4rem;
+            }
+            12.5%{
+                background-color: red;
+                height: 12rem;
+            }
+            25%{
+                background-color: red;
+                height: 4rem;
+            }
+            37.5%{
+                background-color: yellow;
+                height: 12rem;
+            }
+            50%{
+                background-color: yellow;
+                height: 4rem;
+            }
+            62.5%{
+                background-color: blue;
+                height: 12rem;
+            }
+            75%{
+                background-color: blue;
+                height: 4rem;
+            }
+            87.5%{
+                background-color: black;
+                height: 12rem;
+            }
+            100%{
+                background-color: black;
+                height: 4rem;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id='container'>
+        <div id='animation'>
+            <p class='edge' id='p1'></p>
+            <p class='edge' id='p2'></p>
+            <p class='edge' id='p3'></p>
+            <p class='edge' id='p4'></p>
+        </div>
+        <div class='btnContainer'>
+            <p class='button' id='start' onclick="onStart()">Start</p>
+            <p class= 'button' id='stop' onclick="onStop()">Stop</p>
+        </div>
+    </div>
+</body>
+</html>
